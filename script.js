@@ -20,7 +20,7 @@ function timeToString(time) {
     let diffInSec = (diffInMin - mm) * 60;
     let ss = Math.floor(diffInSec);
 
-    let diffInMs = (diffInSec - ss) * 100;
+    let diffInMs = (diffInSec - ss) * 1000;
     let ms = Math.floor(diffInMs);
 
     let formattedHH = hh.toString().padStart(2, "0");
