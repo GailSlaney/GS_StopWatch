@@ -6,17 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gail's Stopwatch!</title>
     <link rel="stylesheet" href="./style.css"/>
-    <link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Tangerine:wght@200;900&display=swap" rel="stylesheet"/>
 </head>
 <body>
     <div class = "stopwatch">
-        <h1><span class = "gail">Gail's</span> STOPWATCH</h1>
-        <div class="semicircle">
-            <span class="time" id="display">00:00:00:000</span>
-            <br>
-            <span class="units" id="unitDisplay">hh:mm:ss:ms</span>
+        <h1><span class = "gail">Gail's</span> Stopwatch</h1>
+        <div class="oval">
+            <div class="time" id="display">00:00:00:000</div>
+        <br>
+            <div class="units" id="unitDisplay">hh:mm:ss:ms</div>
         </div>
-        <div class="controls"
+        <div class="controls">
+            <button class = "buttonPlay">
+                <img id="playButton" src="./images/start.jpg">
+
+                <img id="pauseButton" src="./images/stop.jpg">
+            </button>   
+
+            <button class="buttonReset">
+                <img id="resetButton" src="./images/reset2.jpg">
+            </button>
+        </div>
     </div>
     <script src = "./script.js"></script>
 </body>
