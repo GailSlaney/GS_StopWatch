@@ -1,0 +1,39 @@
+body {
+    background-color: darkslategray;
+    color: floralwhite;
+}
+
+h1 {
+    font-size: 50px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 300;
+
+    text-align: center;
+    line-height: 60px;
+    padding: 0 64px;
+    margin: 0;
+}
+
+.stopwatch {
+    display: grid;
+    justify-items: center;
+    grid-row-gap: 20px;
+    width: 100%;
+    padding-top: 25px;
+}
+
+.semicircle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 250px;
+    width: 300px;
+
+    border: 2px solid;
+    border-radius: 50%;
+}
+
+.time {
+    font-family: "Roboto Mono", monospace;
+}
