@@ -14,8 +14,15 @@ h1 {
     margin: 0;
 }
 
+.gail {
+    font-weight: 500;
+    color: hotpink;
+    text-shadow: lightpink;
+}
+
 .stopwatch {
     display: grid;
+    /*grid-template-rows: 1fr 1fr 1fr;*/
     justify-items: center;
     grid-row-gap: 10px;
     width: 100%;
@@ -23,7 +30,8 @@ h1 {
 }
 
 .oval {
-    display: flex;
+    display:flex;
+    /*grid-template-rows: 10px 10px;*/
     justify-content: center;
     align-items: center;
 
@@ -31,10 +39,29 @@ h1 {
     width: 300px;
 
     border: 5px solid;
-    border-radius: 50%;
+    border-radius: 30%;
 }
 
 .time {
     font-family: "Roboto Mono", monospace;
     font-size: 35px;
+}
+
+.units {
+    font-family: "Roboto Mono", monospace;
+    font-size: 35px;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+}
+
+#playButton {
+    display: block;
+}
+
+#pausebutton {
+    display: none;
 }
