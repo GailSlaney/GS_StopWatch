@@ -1,13 +1,41 @@
 let startTime;
 let elapsedTime;
+let timerInterval;
+
+let playButton = document.getElementById("playButton");
+let pauseButton = document.getElementById("pauseButton");
+let resetButton = document.getElementById("resetButton");
+
+playButton.addEventListener("click", start);
+pauseButton.addEventListener("click", pause);
+resetButton.addEventListener("click", reset);
+
+function print(txt) {
+    document.getElementById("display").innerHTML = txt;
+}
 
 //Starts counting time when start button is clicked.
 function start() {
     startTime = Date.now();
-    setInterval(function printTime() {
+    timerInterval = setInterval(function printTime() {
         elapsedTime = Date.now() - startTime;
-        document.getElementById("display").innerHTML = timeToString(elapsedTime);
+        print(timeToString(elapsedTime));
     }, 10);
+    showButton("PAUSE");
+    /*playButton.style.display = "none";
+    pauseButton.style.display = "block";*/
+}
+
+function pause() {
+    clearInterval(timerInterval);
+    showButton("PLAY");
+}
+
+function showButton(buttonKey) {
+    const buttonToShow = buttonKey === "PLAY" ? playButton : pauseButton;
+    const buttonToHide = buttonKey === "PLAY" ? pauseButton : playButton;
+    buttonToShow.style.display = "block";
+    buttonToHide.style.display = "none";
 }
 
 function timeToString(time) {
@@ -29,3 +57,4 @@ function timeToString(time) {
     let formattedMS = ms.toString().padStart(3, "0");
     return `${formattedHH}:${formattedMM}:${formattedSS}:${formattedMS}`;
 }
+
