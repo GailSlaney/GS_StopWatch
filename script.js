@@ -1,5 +1,5 @@
 let startTime;
-let elapsedTime;
+let elapsedTime = 0;
 let timerInterval;
 
 let playButton = document.getElementById("playButton");
@@ -16,7 +16,7 @@ function print(txt) {
 
 //Starts counting time when start button is clicked.
 function start() {
-    startTime = Date.now();
+    startTime = Date.now() - elapsedTime;
     timerInterval = setInterval(function printTime() {
         elapsedTime = Date.now() - startTime;
         print(timeToString(elapsedTime));
@@ -28,6 +28,13 @@ function start() {
 
 function pause() {
     clearInterval(timerInterval);
+    showButton("PLAY");
+}
+
+function reset(){
+    clearInterval(timerInterval);
+    print("00:00:00:000");
+    elapsedTime = 0;
     showButton("PLAY");
 }
 
