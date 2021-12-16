@@ -31,10 +31,10 @@ h1 {
 
 .oval {
     display:grid;
-    row-gap: 2px;
+    /*row-gap: 20px;*/
     justify-items: center;
-    /*grid-template-rows: 10px 10px;
-    justify-content: center;
+    grid-template-rows: 20px 20px;
+    /*justify-content: center;
     align-items: center;*/
 
     height: 200px;
