@@ -17,7 +17,6 @@ h1 {
 .gail {
     font-weight: 500;
     color: rgb(31, 99, 35);
-    text-shadow: lightpink;
 }
 
 .stopwatch {
@@ -34,12 +33,7 @@ h1 {
     display:flex;    
     background-color: darkslategray;
     /*row-gap: 20px;*/
-    /*justify-items: center;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
-    grid-template-rows: 20px 20px;*/
-    justify-content: center;
+   justify-content: center;
     align-items:center;
 
     height: 200px;
@@ -77,7 +71,6 @@ button {
 
 #playButton {
     display: block;
-    size: 200px;
 }
 
 #pauseButton {
