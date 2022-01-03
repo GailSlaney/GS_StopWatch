@@ -26,11 +26,14 @@ h1 {
      /*align-content: center;*/
     grid-row-gap: 10px;
     width: 100%;
-    padding-top: 25px;s
+    padding-top: 25px;
 }
 
 .oval {
-    display:flex;    
+    display:grid;  
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;  
     background-color: darkslategray;
     /*row-gap: 20px;*/
    justify-content: center;
@@ -52,6 +55,7 @@ h1 {
 .units {
     font-family: "Roboto Mono", monospace;
     font-size: 35px;
+    color: floralwhite;
 }
 
 .controls {
