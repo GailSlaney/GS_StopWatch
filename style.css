@@ -1,6 +1,6 @@
 body {
-    background-color: darkslategray;
-    color: floralwhite;
+    /*background-color: darkslategray;*/
+    color: rgb(2, 2, 17);
 }
 
 h1 {
@@ -16,26 +16,31 @@ h1 {
 
 .gail {
     font-weight: 500;
-    color: hotpink;
+    color: rgb(31, 99, 35);
     text-shadow: lightpink;
 }
 
 .stopwatch {
     display: grid;
     /*grid-template-rows: 1fr 1fr 1fr;*/
-    justify-items: center;
+   justify-items: center;
+     /*align-content: center;*/
     grid-row-gap: 10px;
     width: 100%;
-    padding-top: 25px;
+    padding-top: 25px;s
 }
 
 .oval {
-    display:grid;
+    display:flex;    
+    background-color: darkslategray;
     /*row-gap: 20px;*/
-    justify-items: center;
-    grid-template-rows: 20px 20px;
-    /*justify-content: center;
-    align-items: center;*/
+    /*justify-items: center;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    grid-template-rows: 20px 20px;*/
+    justify-content: center;
+    align-items:center;
 
     height: 200px;
     width: 300px;
@@ -47,6 +52,7 @@ h1 {
 .time {
     font-family: "Roboto Mono", monospace;
     font-size: 35px;
+    color: floralwhite;
 }
 
 .units {
@@ -71,6 +77,7 @@ button {
 
 #playButton {
     display: block;
+    size: 200px;
 }
 
 #pauseButton {
