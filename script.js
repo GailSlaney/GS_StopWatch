@@ -22,15 +22,15 @@ function start() {
         print(timeToString(elapsedTime));
     }, 10);
     showButton("PAUSE");
-    /*playButton.style.display = "none";
-    pauseButton.style.display = "block";*/
 }
 
+//Pauses stopclock, keeping time displayed
 function pause() {
     clearInterval(timerInterval);
     showButton("PLAY");
 }
 
+//Stops clock and resets timer to 0 
 function reset(){
     clearInterval(timerInterval);
     print("00:00:00:000");
@@ -38,6 +38,7 @@ function reset(){
     showButton("PLAY");
 }
 
+//Determines whether to display Play button or Pause button
 function showButton(buttonKey) {
     const buttonToShow = buttonKey === "PLAY" ? playButton : pauseButton;
     const buttonToHide = buttonKey === "PLAY" ? pauseButton : playButton;
@@ -45,6 +46,7 @@ function showButton(buttonKey) {
     buttonToHide.style.display = "none";
 }
 
+//Formats time to display on screen
 function timeToString(time) {
     let diffInHrs = time / 3600000;
     let hh = Math.floor(diffInHrs);
